@@ -1,6 +1,6 @@
 
 class Node():
-    def __init__(self,pos, adjacent =[], padre = None, rgb = (0,0,0)):
+    def __init__(self,pos, linea,  adjacent =[], padre = None, rgb = (0,0,0)):
         self.pos = pos
         self. adjacent = adjacent
         self. padre = padre
@@ -8,6 +8,7 @@ class Node():
         self.g = 99999999
         self.f = 99999999
         self.rgb = rgb
+        self.linea = linea
 
     def display(self):
         fill(self.rgb[0],self.rgb[1],self.rgb[2])
@@ -18,61 +19,61 @@ class Node():
 
         
 
-Piraeus = Node(PVector(223, 795))
-Faliro = Node(PVector(337, 780))
-Moschato = Node(PVector(369, 751))
-Kallithea = Node(PVector(396, 721))
-Tavros = Node(PVector(427, 690))
-Petralona = Node(PVector(455, 661))
-Thissio = Node(PVector(468, 626))
-Monastiraki = Node(PVector(467, 579))
-Omonoia = Node(PVector(465, 531))
-Victoria = Node(PVector(467, 490))
-Attiki = Node(PVector(420, 420))
-Aghios_Nikolaos = Node(PVector(444, 398))
-Kato_patissia = Node(PVector(470, 370))
-Aghios_Eleftherios = Node(PVector(497, 341))
-Ano_Patissia = Node(PVector(525, 313))
-Perissos = Node(PVector(546, 288))
-Pefkakia = Node(PVector(573, 263))
-Nea_lonia = Node(PVector(595, 237))
-Iraklio = Node(PVector(619, 212))
-Irini = Node(PVector(711, 200))
-Neratziotissa = Node(PVector(750, 198))
-Maroussi = Node(PVector(797, 148))
-KAT = Node(PVector(838, 105))
-Kifissia = Node(PVector(882, 59))
+Piraeus = Node(PVector(223, 795),1)
+Faliro = Node(PVector(337, 780),1)
+Moschato = Node(PVector(369, 751),1)
+Kallithea = Node(PVector(396, 721),1)
+Tavros = Node(PVector(427, 690),1)
+Petralona = Node(PVector(455, 661),1)
+Thissio = Node(PVector(468, 626),1)
+Monastiraki = Node(PVector(467, 579),0)
+Omonoia = Node(PVector(465, 531),0)
+Victoria = Node(PVector(467, 490),1)
+Attiki = Node(PVector(420, 420),0)
+Aghios_Nikolaos = Node(PVector(444, 398),1)
+Kato_patissia = Node(PVector(470, 370),1)
+Aghios_Eleftherios = Node(PVector(497, 341),1)
+Ano_Patissia = Node(PVector(525, 313),1)
+Perissos = Node(PVector(546, 288),1)
+Pefkakia = Node(PVector(573, 263),1)
+Nea_lonia = Node(PVector(595, 237),1)
+Iraklio = Node(PVector(619, 212),1)
+Irini = Node(PVector(711, 200),1)
+Neratziotissa = Node(PVector(750, 198),0)
+Maroussi = Node(PVector(797, 148),1)
+KAT = Node(PVector(838, 105),1)
+Kifissia = Node(PVector(882, 59),1)
 
-Aghios_Antonios = Node(PVector(340, 335))
-Sepolia = Node(PVector(382, 377))
-Larissa_Station = Node(PVector(421, 467))
-Metaxourghio = Node(PVector(421, 505))
-Panepistimio = Node(PVector(492, 552))
-Syntagma = Node(PVector(521, 577))
-Akropoli = Node(PVector(521, 630))
-Sygrou_fix = Node(PVector(521, 670))
-Neos_Kosmos = Node(PVector(521, 710))
-Aghios_loanis = Node(PVector(521, 750))
-Dafni = Node(PVector(521, 790))
-Aghios_Dimitrios = Node(PVector(521, 830 ))
-Egaleo = Node(PVector(262, 464))
-Eleonas = Node(PVector(317, 523))
-Kerameikos = Node(PVector(357, 564))
-Evangelismos = Node(PVector(599, 578))
-Megaro_moussikis = Node(PVector(670, 563))
-Ambelokipi = Node(PVector(690, 537))
-Panormou = Node(PVector(714, 515))
-Katehaki = Node(PVector(735, 492))
-Ethniki_Amyna = Node(PVector(758, 466))
-Holorgos = Node(PVector(780, 442))
-Nomismatokopio = Node(PVector(805, 420))
-Aghia_Paraskevi = Node(PVector(827, 395))
-Halondri = Node(PVector(847, 371))
-Doukissis_Plankentias = Node(PVector(884, 336))
-Pallini = Node(PVector(949, 362))
-Palania_Kantza = Node(PVector(948, 426))
-Koropi = Node(PVector(948, 566))
-Airport = Node(PVector(1026, 601))
+Aghios_Antonios = Node(PVector(340, 335),2)
+Sepolia = Node(PVector(382, 377),2)
+Larissa_Station = Node(PVector(421, 467),2)
+Metaxourghio = Node(PVector(421, 505),2)
+Panepistimio = Node(PVector(492, 552),2)
+Syntagma = Node(PVector(521, 577),0)
+Akropoli = Node(PVector(521, 630),2)
+Sygrou_fix = Node(PVector(521, 670),2)
+Neos_Kosmos = Node(PVector(521, 710),2)
+Aghios_loanis = Node(PVector(521, 750),2)
+Dafni = Node(PVector(521, 790),2)
+Aghios_Dimitrios = Node(PVector(521, 830 ),2)
+Egaleo = Node(PVector(262, 464),3)
+Eleonas = Node(PVector(317, 523),3)
+Kerameikos = Node(PVector(357, 564),3)
+Evangelismos = Node(PVector(599, 578),3)
+Megaro_moussikis = Node(PVector(670, 563),3)
+Ambelokipi = Node(PVector(690, 537),3)
+Panormou = Node(PVector(714, 515),3)
+Katehaki = Node(PVector(735, 492),3)
+Ethniki_Amyna = Node(PVector(758, 466),3)
+Holorgos = Node(PVector(780, 442),3)
+Nomismatokopio = Node(PVector(805, 420),3)
+Aghia_Paraskevi = Node(PVector(827, 395),3)
+Halondri = Node(PVector(847, 371),3)
+Doukissis_Plankentias = Node(PVector(884, 336),3)
+Pallini = Node(PVector(949, 362),3)
+Palania_Kantza = Node(PVector(948, 426),3)
+Koropi = Node(PVector(948, 566),3)
+Airport = Node(PVector(1026, 601),3)
 
 Piraeus.adjacent = [(Faliro,2)]
 Faliro.adjacent = [(Piraeus,2),(Moschato,3)]
@@ -142,7 +143,8 @@ nodes = [Piraeus, Faliro, Moschato, Kallithea, Tavros, Petralona, Thissio, Monas
          Ano_Patissia, Perissos, Pefkakia, Nea_lonia, Iraklio, Irini, Neratziotissa, Maroussi, KAT, Kifissia, Aghios_Antonios, Sepolia, Larissa_Station, Metaxourghio, 
          Panepistimio, Syntagma, Akropoli, Sygrou_fix, Neos_Kosmos, Aghios_loanis, Dafni, Aghios_Dimitrios, Egaleo, Eleonas, Kerameikos, Evangelismos, Megaro_moussikis, 
          Ambelokipi, Panormou, Katehaki, Ethniki_Amyna, Holorgos, Nomismatokopio, Aghia_Paraskevi, Halondri, Doukissis_Plankentias, Pallini, Palania_Kantza, Koropi,Airport]
-    
+
+transbordos = [Monastiraki, Syntagma, Omonoia, Attiki]        
 class Boton():
     
     def __init__(self, pos, s,action):
@@ -175,6 +177,7 @@ def ACTIVATE(action):
     global node1, node2, node1Selected, node2Selected, path, pathFound, nodes
     if action == "run":
         runF()
+        
     if action == "restart":
         node1 = Node
         node2 = Node
@@ -208,7 +211,7 @@ def selectClosestNode():
     
     
 def runF():
-    global node1Selected, node2Selected, node1, node2
+    global node1Selected, node2Selected, node1, node2, Path
     
     if node1Selected == False:
         print "PLEASE SELECT NODE 1"
@@ -216,7 +219,7 @@ def runF():
         print "PLEASE SELECT NODE 2"
         
     else:
-         AEstrella(node1,node2)
+        path =  AEstrella(node1,node2)
     
     
     
@@ -289,10 +292,11 @@ def interface():
 #=============A*=================
 path = []
 pathFound = False
+t_trans = 9999
 def AEstrella(node1, node2):
-    global nodes, path, pathFound
+    global nodes, path, pathFound, transbordos, t_trans
     for nodo in nodes:
-        nodo.h = dist(nodo.pos.x, nodo.pos.y, node2.pos.x, node2.pos.y)
+        nodo.h = dist(nodo.pos.x, nodo.pos.y, node2.pos.x, node2.pos.y)/100
     
     abiertos = [node1]
     cerrados = []
@@ -320,6 +324,10 @@ def AEstrella(node1, node2):
                 par[0].padre = actual
                 par[0].g = gAcumulada
                 par[0].f = gAcumulada + par[0].h
+                if actual != node1:
+                    if actual.linea == 0:
+                        if actual.padre.linea != par[0].linea:
+                            par[0].f += t_trans    
             else:
                 if gAcumulada < par[0].g:
                     par[0].g = gAcumulada
@@ -357,7 +365,6 @@ def setup():
     
     
 def draw():
-    
     global img, nodes, node1Selected, node2Selected, node1, node2, path, pathFound
     global listaBotones 
     textSize(32)
@@ -373,6 +380,12 @@ def draw():
     if node2Selected == True:
         fill(255,0,0)
         ellipse(node2.pos.x, node2.pos.y, 15,15)
+        
+    for node in path[::1]:
+        if node.padre != None:
+            strokeWeight(4)
+            stroke(0,0,255)
+            line(node.pos.x, node.pos.y, node.padre.pos.x, node.padre.pos.y)
         
     
     
